@@ -1376,7 +1376,7 @@ export class Emitter {
 
         // @tswow-begin
         if(node.kind === ts.SyntaxKind.ClassDeclaration) {
-            handleClass(node,this.writer);
+            handleClass(node,this);
             handlePacketClass(node, this.writer);
             generateStringify(node, this.writer);
         }

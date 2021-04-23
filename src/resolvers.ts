@@ -241,6 +241,10 @@ export class IdentifierResolver {
         return type;
     }
 
+    public getTypeStringOf(location: ts.Node): string {
+        return this.typeChecker.typeToString(this.getTypeOf(location));
+    }
+
     public getTypeOf(location: ts.Node): ts.Type {
         const type = this.getTypeAtLocation(location);
         return type;
